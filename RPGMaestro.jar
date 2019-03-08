@@ -1,179 +1,211 @@
 import java.util.*;
 import java.math.*;
-import java.io.IOException;
-    
-    // C0de developed and written by: Kyle p. "MACK" McCoy || MAC IDEAL ||
+import java.io.*;
+
+	//Built and Designed by KYLE P. McCOY || KMAC IDE  ||
+
 public class RPGMaestro {
-    
-    public static void main(String[] args) throws IOException{
-   		 //Declare a Scanner Class
-   	 Scanner read = new Scanner(System.in);
-   		 //Declaration of Strings
-   	 String PlayerName = "";
-   	 String PlayerRace = "";
-   	 String PlayerClass = "";
-   	 String WeaponName = "";
-   	 String ShieldName = "";
-   	 String ArmorName = "";
-   	 String Stackname = "";
-   	 String PlayerType = "";
-   	 String MissionStatus = "";
-   	 
-   		 //Declaration of Integers
-   	 int PlayerHP = 10;
-   	 int PlayerMaxHP =10;
-   	 int playerShield = 0;
-   	 int PlayerDMG = 1;
-   	 int PlayerTool = 0;
-   	 int PlayerArmor = 0;
-   	 int PlayerGold = 0;
-   	 int PlayerLvl = 0;
-   	 float PlayerExp = 0;
-   	 int StackHP = 0;
-   	 int StackDMG = 0;
-   	 int StackGold = 0;
-   	 int StackFind = 0;
-   	 
-   	 char picker = '0';
-   	 
-   		 //Begin Introductory Process
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++  	Welcome Noble Knight!!  	++");
-   	 System.out.println("++  	Our Kingdom needs YOU!  	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++  	We have been plagued    	++");
-   	 System.out.println("++  	by terrible creatures   	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++  	Will You help Us in     	++");
-   	 System.out.println("++  	Our time of great       	++");
-   	 System.out.println("++  	need?                   	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++      	<ENTER> TO          	++");
-   	 System.out.println("++       	CONTINUE           	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 
-   	 System.in.read();
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++ 	We cannot help you       	++");
-   	 System.out.println("++ 	with gear or weapons     	++");
-   	 System.out.println("++ 	but you will be able     	++");
-   	 System.out.println("++ 	to find everything       	++");
-   	 System.out.println("++ 	along your journey       	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++     	<ENTER> TO           	++");
-   	 System.out.println("++      	CONTINUE            	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.in.read();
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++ 	Thank you for your       	++");
-   	 System.out.println("++ 	help... my name is       	++");
-   	 System.out.println("++ 	SHAXX...                 	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++ 	What is your name?       	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++  	Please enter your       	++");
-   	 System.out.println("++  	name to  CONTINUE       	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 
-   		 PlayerName = read.nextLine();
-   	 
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++   	^^        	^^       	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++  	^           	^       	++");
-   	 System.out.println("++   	\\         	/        	++");
-   	 System.out.println("++     	____________         	++");
-   	 System.out.println("++                              	++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 System.out.println("++++++++++++++++++++++++++++++++++++++");
-   	 
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("Thank you for your patience Sir " + PlayerName);
-   	 System.out.println("");
-   	 System.out.println("Please Pick your Race");
-   	 System.out.println("");
-   	 System.out.println("A: Human");
-   	 System.out.println("B: Elf");
-   	 System.out.println("C: Halfling");
-   	 System.out.println("D: Gnome");
-   	 System.out.println("E: Dwarf");
-   	 System.out.println("");
-   	 picker = read.next().charAt(0);
-   		 //Picker for Race
-   		 switch(picker) {
-   		 case 'A': case 'a': PlayerRace = "Human"; break;
-   		 case 'B': case 'b': PlayerRace = "Elf"; break;
-   		 case 'C': case 'c': PlayerRace = "Halfling"; break;
-   		 case 'D': case 'd': PlayerRace = "Dwarf"; break;
-   		 case '7': PlayerRace = "GOD"; break;
-   		 default : System.out.println("Well Keep Your Secrets Then!"); break;
-   		 }
-   	 
-   	 System.out.println("");
-   	 System.out.println("");
-   	 System.out.println("ok, " + PlayerName + "!");
-   	 System.out.println("");
-   	 System.out.println("Time to Pick your class");
-   	 System.out.println("");
-   	 System.out.println("A: Warrior");
-   	 System.out.println("B: Ranger");
-   	 System.out.println("C: Paladin");
-   	 System.out.println("D: Thief");
-   	 System.out.println("E: Warlock");
-   	 System.out.println("F: Mage");
-   	 System.out.println("G: Archer");
-   	 System.out.println("");
-   		 picker = read.next().charAt(0);
-   		 
-   		 switch(picker) {
-   		 case 'A': case 'a': PlayerClass = "Warrior"; break;
-   		 case 'B': case 'b': PlayerClass = "Ranger"; break;
-   		 case 'C': case 'c': PlayerClass = "Paladin"; break;
-   		 case 'D': case 'd': PlayerClass = "Thief"; break;
-   		 case 'E': case 'e': PlayerClass = "Warlock"; break;
-   		 case 'F': case 'f': PlayerClass = "Mage"; break;
-   		 case 'G': case 'g': PlayerClass = "Archer"; break;
-   		 case '7': PlayerClass = "Ninja"; break;
-   		 default : PlayerClass = "Unknown"; break;
-   		 }
-   	 
-   	 System.out.println("Are you ready for your first fight?");
-   	 System.out.println("Press <ENTER> to continue");
-   	 
-   	 StackHP = 10;
-  	 StackDMG = 1;
-  	 StackGold = 5;
-   	 
-  	 System.out.println("<<FIGHT!!>>");
-  	 
-   	 
-   		 System.in.read();
-    }}
+	
+	public static Scanner read = new Scanner (System.in);
+	static Random rand = new Random();
+	
+	static String UserName = "";
+	static String UserClass = "";
+	static String UserRace = "";
+	static String UserTitle = "";
+	
+	static String UserPet = "";
+	
+	static String EnemyName = "";
+	
+	
+	static double UserATK = 0.0;
+	static double UserHP = 0.0;
+	static double UserMaxHP = 0.0;
+	static double UserShield = 0.0;
+	
+	static double PetATK = 0.0;
+	static double PetHP = 0.0;
+	static double PetShield = 0.0;
+	
+	static double EnemyATK = 0.0;
+	static double EnemyHP = 0.0;
+	static double EnemyShield = 0;
+	
+	static int UserGold = 0;
+	static int UserEXP = 0;
+	static int UserLVL = 0;
+	
+	static int PetGold = 0;
+	static int PetEXP = 0;
+	
+	static int EnemyGold = 0;
+	static int EnemyEXP = 0;
+	
+	static int RandGen = 0;
+	static int Input = 0;
+	
+	static boolean valid = false;
+	
+	
+static void IntroBlock() throws IOException{
+	
+	System.out.println("");
+	System.out.println("Good Day!");
+	System.out.println("");
+	System.out.println("My name is Sardis");
+	System.out.println("");
+	System.out.println("Fare ye well to-die???");
+	System.out.println("...");
+	System.out.println("...");
+	System.out.println("        Uhhhhh, yeah!");
+	System.out.println("Good to hear young lad!");
+	System.out.println("");
+	System.out.println("Press <ENTER> to continue the conversation");
+	System.in.read();
+	System.out.println("");
+	System.out.println("This World needs your help!");
+	System.out.println("Something Dark and Dangerous is in our midst");
+	System.out.println("We believe that ONLY YOU can prevent");
+	System.out.println("...");
+	System.out.println("FOREST FIRES???");
+	System.out.println("...");
+	System.out.println("That's not right... ");
+	System.out.println("Press <ENTER> to Continue");
+	System.in.read();
+	System.out.println("");
+	System.out.println("We have sent our best warriors out, to no avail");
+	System.out.println("");
+	System.out.println("We think you can help us fight back against the darkness");
+	System.out.println("Can you help us?");
+	System.out.println("You will recieve much Gold and Fame on your Journey");
+	System.out.println("Press <ENTER> to Continue");
+	System.in.read();
+
+}	//End Method
+static void NameBlock() {
+	System.out.println("PLease enter your name, a nickname will do just fine!");
+	String Username = read.nextLine();
+	UserName = Username;
+}	//End Method
+static void ClassBlock() {
+	System.out.println("It is time to choose your class!");
+	System.out.println("Choose the NUMBER for the Class that you would like to have");
+	System.out.println("");
+	System.out.println("1: Warrior");
+	System.out.println("2: Knight");
+	System.out.println("3: Thief");
+	System.out.println("4: Mage");
+	System.out.println("5: Warlock");
+	System.out.println("6: Ninja");
+	Input = read.nextInt();
+	
+	String ClassType[] = new String[] {"Warrior", "Knight", "Thief", "Mage", "Warlock", "Ninja"};
+	
+	UserClass = ClassType[(Input - 1)];
+}	//End Method
+static void RaceBlock() {
+	System.out.println("It is time to choose your race!");
+	System.out.println("Choose the NUMBER for the Race that you would like to have");
+	System.out.println("");
+	System.out.println("1: Human");
+	System.out.println("2: Elf");
+	System.out.println("3: Halfling");
+	System.out.println("4: Gnome");
+	System.out.println("5: DragonBorn");
+	System.out.println("6: DemiGod");
+	Input = read.nextInt();
+	
+	String RaceType[] = new String[] {"Human", "Elf", "Halfling", "Gnome", "DragonBorn", "DemiGod"};
+	
+	UserRace = RaceType[(Input - 1)];
+}	//End Method
+static void TrainingBlock() {
+	
+	System.out.println("");
+	System.out.println("Thank you for your help " + UserName + "!");
+	System.out.println("Let's see if you're really ready to head off on your journey");
+	
+	UserHP = 10;
+	UserATK = 1;
+	
+	valid = true;
+	
+	EnemyName = "Training Dummy";
+	EnemyHP = 6;
+	EnemyATK =1.5;
+	
+}//End Method
+static void OpponentBlock() {
+	String ListName[] = new String[] {"Rat", "Feral Cat", "Frightened Horse", "Aligator"};
+	double ListHP[]   = new double[] {4,8,15,12};
+	double ListATK[]  = new double[] {1,1.5,4,6};
+	int ListGold[]	  = new int[]	 {1,1,4,2};
+	int ListEXP[]	  = new int[]	 {1,1,1,1};
+	
+	RandGen = rand.nextInt(4);
+	EnemyName = ListName[RandGen];
+	EnemyHP = ListHP[RandGen];
+	EnemyATK = ListATK[RandGen];
+	EnemyGold = ListGold[RandGen];
+	EnemyEXP = ListEXP[RandGen];
+	
+}	//End Method
+static void FightBlock() {
+	
+	System.out.println("");
+	System.out.println(EnemyName + " deals " + EnemyATK + " damage!");
+	System.out.println("");
+	System.out.println(UserName + " deals " + UserATK + " damage!");
+	System.out.println("");
+	
+	EnemyHP -= UserATK;
+	UserHP -= EnemyATK;
+	
+	System.out.println("");
+	System.out.println("You have " + UserHP + " left!");
+	System.out.println("");
+	System.out.println("Enemy " + EnemyName + " has " + EnemyHP + " HP left!");
+	System.out.println("");
+}	//End Method
+static void VictoryBlock() throws IOException {
+	if (UserHP >= EnemyHP) {
+		UserGold += EnemyGold;
+		UserEXP += EnemyEXP;
+	}	//End IF
+	else {
+		UserGold = 0;
+		UserLVL = 0;
+		UserEXP = 0;
+		UserATK = 1;
+		UserHP = 10;
+		System.out.println("You DIED!");
+		System.out.println("");
+		System.out.println("Press <ENTER> to continue");
+		System.in.read();
+	} //End Else
+}	//End Method 
+static void MenuBlock() {
+	System.out.println("Use this menu to make your next move");
+	System.out.println("A: Fight again");
+	System.out.println("B: Tavern");
+	System.out.println("C: Shops");
+	System.out.println("D:Banks");
+}	//End Method
+public static void main(String[] args) throws IOException{
+	
+	IntroBlock();
+	NameBlock();
+	ClassBlock();
+	RaceBlock();
+	
+	System.out.println("It is good to finally be acquainted " + UserName + " the " + UserClass + " " + UserRace);
+	
+	TrainingBlock();
+	if (!valid);
+		OpponentBlock();
+	while (UserHP > 0 && EnemyHP > 0);
+	FightBlock();
+	VictoryBlock();
+}	//End Main Method
+}	//End Public Class
